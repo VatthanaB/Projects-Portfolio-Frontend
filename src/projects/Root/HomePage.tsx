@@ -1,5 +1,4 @@
-import React from "react";
-import Card from "./components/card";
+import Card from "./components/Card.tsx";
 import ReactMealImg from "../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../assets/images/root/BookStore.jpg";
 import { SiVite, SiExpress, SiTailwindcss, SiTypescript } from "react-icons/si";
