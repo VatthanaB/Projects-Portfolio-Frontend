@@ -67,7 +67,7 @@ const AvaibleMeals = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5555/food/getFood")
+      .get(`${import.meta.env.VITE_API_URL}/food/getFood`)
       .then((response) => {
         const meals: Meal[] = [];
         for (const key in response.data) {

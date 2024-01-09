@@ -42,10 +42,13 @@ function Cart(props: CartProps) {
     try {
       console.log(userData);
       console.log(cartCtx.items);
-      const response = await axios.post("http://localhost:5555/food/orders", {
-        user: userData,
-        orderedItems: cartCtx.items,
-      });
+      const response = await axios.post(
+        `${import.meta.env.VITE_API_URL}/food/orders`,
+        {
+          user: userData,
+          orderedItems: cartCtx.items,
+        }
+      );
       if (response.status !== 200) {
         throw new Error("Something went wrong!");
       }
