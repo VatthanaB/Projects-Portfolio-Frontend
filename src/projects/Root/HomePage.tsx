@@ -31,12 +31,13 @@ function HomePage() {
             for easy access. Check out my work, for more information about me go
             on{" "}
             <a
-              className="font-bold "
+              className="font-bold"
               href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              {" "}
               My Personal Page
-            </a>{" "}
+            </a>
             .
           </p>
         </div>
