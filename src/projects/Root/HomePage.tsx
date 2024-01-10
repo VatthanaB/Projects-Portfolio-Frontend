@@ -4,6 +4,10 @@ import BookStoreImg from "../../assets/images/root/BookStore.jpg";
 import { SiVite, SiExpress, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
+import {
+  BookStoreAppDescription,
+  FoodOrderingAppDescription,
+} from "./descriptions/AppDescription.tsx";
 import Svg from "./components/Svg.tsx";
 function HomePage() {
   const fullStackIcons = [
@@ -51,8 +55,8 @@ function HomePage() {
           route={"/book-store"}
           appName={" Book Store App"}
           description="This is a book store app that allows users to add, edit, and delete books."
-          icons={[...fullStackIcons]}
-          modalDescription="This is a book store app that allows users to add, edit, and delete books."
+          icons={[...fullStackIcons, SiTailwindcss]}
+          modalDescription={<BookStoreAppDescription />}
           githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/BookStoreProject"
         />
         <Card
@@ -60,8 +64,8 @@ function HomePage() {
           route={"/food-app"}
           appName={"Food Ordering App"}
           description="This is a food ordering app that allows users to order food from a menu."
-          icons={[...fullStackIcons, SiTailwindcss]}
-          modalDescription="This is a food ordering app that allows users to order food from a menu."
+          icons={[...fullStackIcons]}
+          modalDescription={<FoodOrderingAppDescription />}
           githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/FoodOrderingApp"
         />
       </div>

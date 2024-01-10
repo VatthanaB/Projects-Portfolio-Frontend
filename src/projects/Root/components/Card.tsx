@@ -6,7 +6,7 @@ interface CardProps {
   route: string;
   appName: string;
   description: string;
-  modalDescription: string;
+  modalDescription: JSX.Element;
   githubLink: string;
 
   icons: IconType[];
@@ -59,9 +59,6 @@ function Card(props: CardProps) {
           {/* MODAL */}
           <dialog id={props.appName} className="modal">
             <div className="modal-box">
-              <h3 className="font-bold text-lg text-customBlue">
-                {props.appName}
-              </h3>
               <p className="py-4 text-customBlue">{props.modalDescription}</p>
 
               <div className="modal-action">
