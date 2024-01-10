@@ -1,6 +1,6 @@
 export const BookStoreAppDescription = () => {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md w-96">
+    <div>
       <h1 className="text-2xl font-bold mb-4">Book Store App</h1>
       <p className="text-gray-600 mb-4">
         A modern MERN stack book management app showcasing the power of Vite,
