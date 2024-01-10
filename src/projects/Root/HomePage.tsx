@@ -4,7 +4,7 @@ import BookStoreImg from "../../assets/images/root/BookStore.jpg";
 import { SiVite, SiExpress, SiTailwindcss, SiTypescript } from "react-icons/si";
 import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
 import { FaReact } from "react-icons/fa";
-import Svg from "../../UI/Svg.tsx";
+import Svg from "./components/Svg.tsx";
 function HomePage() {
   const fullStackIcons = [
     SiVite,
