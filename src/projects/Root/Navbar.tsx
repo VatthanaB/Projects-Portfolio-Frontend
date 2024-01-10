@@ -1,53 +1,98 @@
 import profilePic from "../../assets/images/root/profile.jpg";
 import { NavLink, Link } from "react-router-dom";
+import { FaHamburger } from "react-icons/fa";
 
 const Navbar = () => {
+  const isActiveClassName =
+    "block py-2 pl-3 pr-4 text-customDarkOrange rounded hover:text-white md:border-0 ";
+  const isNotActiveClassName =
+    "block py-2 pl-3 pr-4 text-white rounded hover:text-customDarkOrange md:border-0 ";
+  const isNotActiveClassNameMobile =
+    "block py-2 pl-3 pr-4 text-white rounded hover:text-customDarkOrange md:border-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
+  const isActiveClassNameMobile =
+    "block py-2 pl-3 pr-4 text-customDarkOrange rounded hover:text-white md:border-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
   return (
-    <nav className="bg-white border-gray-200 dark:bg-gray-900">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
+    <nav className="bg-customBlue border-gray-200 dark:bg-gray-900 ">
+      <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto p-4">
         <Link to="/" className="flex items-center ">
           <img
             src={profilePic}
-            className="h-10 mr-3 rounded-full"
-            alt="Flowbite Logo"
+            className="h-16 mr-3 rounded-full"
+            alt=" Logo"
           />
-          <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+          <span className="self-center text-lg md:text-2xl font-semibold whitespace-nowrap text-white">
             Vatthana's Projects
           </span>
         </Link>
-        <button
-          data-collapse-toggle="navbar-default"
-          type="button"
-          className="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600"
-          aria-controls="navbar-default"
-          aria-expanded="false"
-        >
-          <span className="sr-only">Open main menu</span>
-          <svg
-            className="w-5 h-5"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 17 14"
-          >
-            <path
-              stroke="currentColor"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              stroke-width="2"
-              d="M1 1h15M1 7h15M1 13h15"
-            />
-          </svg>
-        </button>
-        <div className="hidden w-full md:block md:w-auto" id="navbar-default">
-          <ul className="font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        {/* Navlinks */}
+        <div className="hidden w-full lg:block md:w-auto" id="navbar-default">
+          <ul className=" text-xl font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? isActiveClassName : isNotActiveClassName
+                }
+                end
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/book-store"
+                // className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className={({ isActive }) =>
+                  isActive ? isActiveClassName : isNotActiveClassName
+                }
+              >
+                Book-Store
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/food-app"
+                className={({ isActive }) =>
+                  isActive ? isActiveClassName : isNotActiveClassName
+                }
+              >
+                Food-App
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/next-project"
+                className={({ isActive }) =>
+                  isActive ? isActiveClassName : isNotActiveClassName
+                }
+              >
+                Next Project (Coming Soon)
+              </NavLink>
+            </li>
+            <li>
+              <a
+                href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
+                className={isNotActiveClassName}
+              >
+                My Personal Page
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        {/* Dropdown */}
+        <details className="dropdown dropdown-end lg:hidden">
+          <summary className=" border-none btn bg-transparent text-3xl text-white">
+            <FaHamburger />
+          </summary>
+          <ul className="p-2 shadow menu dropdown-content z-[1] bg-slate-400 rounded-box w-52 text-lg">
             <li>
               <NavLink
                 to="/"
                 className={({ isActive }) =>
                   isActive
-                    ? "block py-2 pl-3 pr-4 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    ? isActiveClassNameMobile
+                    : isNotActiveClassNameMobile
                 }
                 end
               >
@@ -60,8 +105,8 @@ const Navbar = () => {
                 // className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
                 className={({ isActive }) =>
                   isActive
-                    ? "block py-2 pl-3 pr-4 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    ? isActiveClassNameMobile
+                    : isNotActiveClassNameMobile
                 }
               >
                 Book-Store
@@ -72,8 +117,8 @@ const Navbar = () => {
                 to="/food-app"
                 className={({ isActive }) =>
                   isActive
-                    ? "block py-2 pl-3 pr-4 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    ? isActiveClassNameMobile
+                    : isNotActiveClassNameMobile
                 }
               >
                 Food-App
@@ -84,8 +129,8 @@ const Navbar = () => {
                 to="/next-project"
                 className={({ isActive }) =>
                   isActive
-                    ? "block py-2 pl-3 pr-4 text-blue-700 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
-                    : "block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                    ? isActiveClassNameMobile
+                    : isNotActiveClassNameMobile
                 }
               >
                 Next Project (Coming Soon)
@@ -94,13 +139,13 @@ const Navbar = () => {
             <li>
               <a
                 href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
-                className="block py-2 pl-3 pr-4 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent"
+                className={isNotActiveClassNameMobile}
               >
                 My Personal Page
               </a>
             </li>
           </ul>
-        </div>
+        </details>
       </div>
     </nav>
   );
