@@ -140,6 +140,8 @@ const Navbar = () => {
               <a
                 href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
                 className={isNotActiveClassNameMobile}
+                target="_blank"
+                rel="noopener noreferrer"
               >
                 My Personal Page
               </a>
