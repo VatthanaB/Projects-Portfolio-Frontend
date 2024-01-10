@@ -33,6 +33,8 @@ function HomePage() {
             <a
               className="font-bold "
               href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
+              target="_blank"
+              rel="noopener noreferrer"
             >
               {" "}
               My Personal Page
