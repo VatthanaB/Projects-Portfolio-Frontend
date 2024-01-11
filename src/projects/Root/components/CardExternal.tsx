@@ -12,9 +12,13 @@ interface CardProps {
 }
 function Card(props: CardProps) {
   return (
-    <div className="card md:w-4/5 lg:w-1/3 glass">
+    <div className="card md:w-4/5 lg:w-1/4 glass ">
       <figure>
-        <img src={props.image} alt="car!" />
+        <img
+          src={props.image}
+          alt="car!"
+          className="w-full h-64 object-cover"
+        />
       </figure>
       <div className="card-body text-slate-100">
         <h2 className="card-title text-customBlue">{props.appName}</h2>
