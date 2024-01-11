@@ -1,75 +1,32 @@
+// Importing necessary modules and CSS
 import { useEffect, useState } from "react";
 import classes from "./AvaibleMeals.module.css";
 import Card from "../UI/Card";
 import MealItem from "./MealItem/MealItem";
 import axios from "axios";
-// const DUMMY_MEALS = [
-//   {
-//     id: "m1",
-//     name: "Pad Thai",
-//     description: "Classic Thai stir-fried noodles",
-//     price: 11.99,
-//   },
-//   {
-//     id: "m2",
-//     name: "Banh Mi",
-//     description: "Vietnamese sandwich with grilled meats",
-//     price: 9.99,
-//   },
-//   {
-//     id: "m3",
-//     name: "Satay Skewers",
-//     description: "Indonesian grilled skewers with peanut sauce",
-//     price: 12.5,
-//   },
-//   {
-//     id: "m4",
-//     name: "Mango Sticky Rice",
-//     description: "Thai dessert with sweet mango and sticky rice",
-//     price: 7.99,
-//   },
-//   {
-//     id: "m5",
-//     name: "Pho",
-//     description: "Traditional Vietnamese noodle soup",
-//     price: 10.49,
-//   },
-//   {
-//     id: "m6",
-//     name: "Laksa",
-//     description: "Spicy Malaysian coconut noodle soup",
-//     price: 13.99,
-//   },
-//   {
-//     id: "m7",
-//     name: "Som Tum",
-//     description: "Thai green papaya salad",
-//     price: 8.99,
-//   },
-//   {
-//     id: "m8",
-//     name: "Nasi Goreng",
-//     description: "Indonesian fried rice with vegetables and chicken",
-//     price: 11.5,
-//   },
-// ];
 
+// AvaibleMeals component
 const AvaibleMeals = () => {
+  // Interface for a meal
   interface Meal {
     id: string;
     name: string;
     description: string;
     price: number;
   }
+
+  // State variables for meals, loading status, and HTTP error
   const [meals, setMeals] = useState<Meal[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [httpError, setHttpError] = useState("");
 
+  // Effect hook to fetch meals from the API
   useEffect(() => {
     axios
       .get(`${import.meta.env.VITE_API_URL}/food/getFood`)
       .then((response) => {
         const meals: Meal[] = [];
+        // Loop through the response data and create meals
         for (const key in response.data) {
           meals.push({
             id: response.data[key]._id,
@@ -78,15 +35,18 @@ const AvaibleMeals = () => {
             price: response.data[key].price,
           });
         }
+        // Update the meals state and set loading status to false
         setMeals(meals);
         setIsLoading(false);
       })
       .catch((error) => {
+        // On error, set loading status to false and update the HTTP error state
         setIsLoading(false);
         setHttpError(error.message);
       });
   }, []);
 
+  // If loading, return a loading message
   if (isLoading) {
     return (
       <section className={classes.MealsLoading}>
@@ -94,6 +54,8 @@ const AvaibleMeals = () => {
       </section>
     );
   }
+
+  // If there's an HTTP error, return an error message
   if (httpError) {
     return (
       <section className={classes.MealsError}>
@@ -101,12 +63,8 @@ const AvaibleMeals = () => {
       </section>
     );
   }
-  interface Meal {
-    id: string;
-    name: string;
-    description: string;
-    price: number;
-  }
+
+  // Map through the meals and create a MealItem component for each meal
   const mealsList = meals.map((meal: Meal) => (
     <MealItem
       id={meal.id}
@@ -116,6 +74,8 @@ const AvaibleMeals = () => {
       price={meal.price}
     />
   ));
+
+  // Return the meals inside a Card component
   return (
     <section className={classes.meals}>
       <Card>
@@ -125,4 +85,5 @@ const AvaibleMeals = () => {
   );
 };
 
+// Export AvaibleMeals component
 export default AvaibleMeals;

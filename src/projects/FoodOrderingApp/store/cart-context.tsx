@@ -1,5 +1,7 @@
+// Importing React
 import React from "react";
 
+// Interface for an item
 interface Item {
   id: string;
   name: string;
@@ -7,20 +9,23 @@ interface Item {
   price: number;
 }
 
+// Interface for the context type
 interface CartContextType {
-  items: Item[];
-  totalAmount: number;
-  addItem: (item: Item) => void;
-  removeItem: (id: string) => void;
-  clearCart: () => void;
+  items: Item[]; // Array of items in the cart
+  totalAmount: number; // Total amount in the cart
+  addItem: (item: Item) => void; // Function to add an item to the cart
+  removeItem: (id: string) => void; // Function to remove an item from the cart
+  clearCart: () => void; // Function to clear the cart
 }
 
+// Creating the cart context with default values
 const CartContext = React.createContext<CartContextType>({
-  items: [],
-  totalAmount: 0,
-  addItem: () => {},
-  removeItem: () => {},
-  clearCart: () => {},
+  items: [], // Default items is an empty array
+  totalAmount: 0, // Default total amount is 0
+  addItem: () => {}, // Default addItem does nothing
+  removeItem: () => {}, // Default removeItem does nothing
+  clearCart: () => {}, // Default clearCart does nothing
 });
 
+// Exporting the cart context
 export default CartContext;
