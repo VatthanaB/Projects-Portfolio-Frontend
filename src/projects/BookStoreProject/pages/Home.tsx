@@ -1,31 +1,41 @@
-import { useEffect, useState } from "react";
-import axios from "axios";
-import Spinner from "../components/Spinner";
-import { Link } from "react-router-dom";
-import { MdOutlineAddBox } from "react-icons/md";
+// Import necessary components and hooks
+import { useEffect, useState } from "react"; // Import useEffect and useState hooks for side effects and state management
+import axios from "axios"; // Import axios for making HTTP requests
+import Spinner from "../components/Spinner"; // Import Spinner component
+import { Link } from "react-router-dom"; // Import Link component for navigation
+import { MdOutlineAddBox } from "react-icons/md"; // Import MdOutlineAddBox icon
 
-import BookTable from "../components/home/BookTable";
-import BookCard from "../components/home/BookCard";
+import BookTable from "../components/home/BookTable"; // Import BookTable component
+import BookCard from "../components/home/BookCard"; // Import BookCard component
 
+// Define the Home component
 const Home = () => {
-  const [books, setBooks] = useState([]);
-  const [loading, setLoading] = useState(false);
-  const [showType, setShowType] = useState("table");
+  // Define state variables
+  const [books, setBooks] = useState([]); // State for books
+  const [loading, setLoading] = useState(false); // State for loading status
+  const [showType, setShowType] = useState("table"); // State for show type
 
+  // Define effect for fetching books
   useEffect(() => {
+    // Set loading status to true
     setLoading(true);
+
+    // Make a GET request to the API to fetch the books
     axios
       .get(`${import.meta.env.VITE_API_URL}/books`)
       .then((res) => {
+        // On success, set the books and loading status
         setBooks(res.data.data);
         setLoading(false);
       })
       .catch((err) => {
+        // On error, log the error and set loading status
         console.log(err);
         setLoading(false);
       });
-  }, []);
+  }, []); // Depend on nothing to run only on mount
 
+  // Define the JSX to be rendered
   return (
     <div className="p-4">
       <div className="flex justify-center items-center gap-x-4 ">
@@ -59,4 +69,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Home; // Export Home component

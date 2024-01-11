@@ -3,5 +3,4 @@ export interface Book {
   title: string;
   author: string;
   publishYear: number;
-  // Add other properties of a book here
 }

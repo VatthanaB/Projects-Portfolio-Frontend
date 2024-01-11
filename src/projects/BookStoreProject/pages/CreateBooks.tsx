@@ -1,28 +1,40 @@
-import BackButton from "../components/BackButton";
-import Spinner from "../components/Spinner";
-import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
-import { useSnackbar } from "notistack";
+// Import necessary components and hooks
+import BackButton from "../components/BackButton"; // Import BackButton component
+import Spinner from "../components/Spinner"; // Import Spinner component
+import axios from "axios"; // Import axios for making HTTP requests
+import { useState } from "react"; // Import useState hook for state management
+import { useNavigate } from "react-router-dom"; // Import useNavigate hook for navigation
+import { useSnackbar } from "notistack"; // Import useSnackbar hook for showing snackbars
 
+// Define the CreateBooks component
 const CreateBooks = () => {
-  const [loading, setLoading] = useState(false);
-  const [title, setTitle] = useState("");
-  const [author, setAuthor] = useState("");
-  const [publishYear, setPublishYear] = useState("");
-  const navigate = useNavigate();
-  const { enqueueSnackbar } = useSnackbar();
+  // Define state variables
+  const [loading, setLoading] = useState(false); // State for loading status
+  const [title, setTitle] = useState(""); // State for book title
+  const [author, setAuthor] = useState(""); // State for book author
+  const [publishYear, setPublishYear] = useState(""); // State for book publish year
 
+  // Define hooks
+  const navigate = useNavigate(); // Hook for navigation
+  const { enqueueSnackbar } = useSnackbar(); // Hook for showing snackbars
+
+  // Define function for saving a book
   const handleSaveBook = () => {
+    // Define data to be sent in the request
     const data = {
       title,
       author,
       publishYear,
     };
+
+    // Set loading status to true
     setLoading(true);
+
+    // Make a POST request to the API to create a new book
     axios
       .post(`${import.meta.env.VITE_API_URL}/books`, data)
       .then(() => {
+        // On success, set loading status to false, show a success snackbar, and navigate to the book store
         setLoading(false);
         enqueueSnackbar("Book Created Successfully", {
           variant: "success",
@@ -30,6 +42,7 @@ const CreateBooks = () => {
         navigate("/book-store");
       })
       .catch((err) => {
+        // On error, log the error, show an error snackbar, and set loading status to false
         console.log(err);
         enqueueSnackbar("Something went wrong , please try again later", {
           variant: "error",
@@ -37,6 +50,8 @@ const CreateBooks = () => {
         setLoading(false);
       });
   };
+
+  // Define the JSX to be rendered
   return (
     <div className="p-4">
       <BackButton />
@@ -78,4 +93,4 @@ const CreateBooks = () => {
   );
 };
 
-export default CreateBooks;
+export default CreateBooks; // Export CreateBooks component

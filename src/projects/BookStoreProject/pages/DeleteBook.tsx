@@ -1,22 +1,31 @@
-import { useState } from "react";
-import BackButton from "../components/BackButton";
-import Spinner from "../components/Spinner";
-import axios from "axios";
-import { useNavigate, useParams } from "react-router-dom";
-import { useSnackbar } from "notistack";
+// Import necessary components and hooks
+import { useState } from "react"; // Import useState hook for state management
+import BackButton from "../components/BackButton"; // Import BackButton component
+import Spinner from "../components/Spinner"; // Import Spinner component
+import axios from "axios"; // Import axios for making HTTP requests
+import { useNavigate, useParams } from "react-router-dom"; // Import useNavigate and useParams hooks for navigation and accessing route parameters
+import { useSnackbar } from "notistack"; // Import useSnackbar hook for showing snackbars
 
+// Define the DeleteBook component
 const DeleteBook = () => {
-  const [loading, setLoading] = useState(false);
-  const navigate = useNavigate();
-  const { id } = useParams();
-  const { enqueueSnackbar } = useSnackbar();
+  // Define state variables
+  const [loading, setLoading] = useState(false); // State for loading status
 
+  // Define hooks
+  const navigate = useNavigate(); // Hook for navigation
+  const { id } = useParams(); // Hook for accessing route parameters
+  const { enqueueSnackbar } = useSnackbar(); // Hook for showing snackbars
+
+  // Define function for deleting a book
   const handleDeleteBook = () => {
+    // Set loading status to true
     setLoading(true);
 
+    // Make a DELETE request to the API to delete the book
     axios
       .delete(`${import.meta.env.VITE_API_URL}/books/${id}`)
       .then(() => {
+        // On success, set loading status to false, show a success snackbar, and navigate to the book store
         setLoading(false);
         enqueueSnackbar("Book Deleted Successfully", {
           variant: "success",
@@ -24,6 +33,7 @@ const DeleteBook = () => {
         navigate("/book-store");
       })
       .catch((err) => {
+        // On error, log the error, show an error snackbar, and set loading status to false
         console.log(err);
         setLoading(false);
         enqueueSnackbar("Something went wrong , please try again later", {
@@ -31,6 +41,8 @@ const DeleteBook = () => {
         });
       });
   };
+
+  // Define the JSX to be rendered
   return (
     <div className="p-4">
       <BackButton />
@@ -51,4 +63,4 @@ const DeleteBook = () => {
   );
 };
 
-export default DeleteBook;
+export default DeleteBook; // Export DeleteBook component
