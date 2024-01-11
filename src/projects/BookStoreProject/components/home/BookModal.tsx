@@ -13,21 +13,20 @@ interface BookModalProps {
 // Define the BookModal component
 const BookModal: React.FC<BookModalProps> = ({ book, onClose }) => {
   return (
-    // Modal overlay
     <div
       className="fixed bg-black bg-opacity-60 top-0 left-0 right-0 bottom-0 z-50 flex justify-center items-center"
-      onClick={onClose} // Close the modal when overlay is clicked
+      onClick={onClose}
     >
       // Modal content
       <div
         onClick={(event) => {
-          event.stopPropagation(); // Prevent click events from bubbling up to the overlay
+          event.stopPropagation();
         }}
         className="w-[600px] max-w-full h-[400px] bg-white rounded-xl p-4 flex flex-col relative"
       >
         // Close button
         <AiOutlineClose
-          onClick={onClose} // Close the modal when close button is clicked
+          onClick={onClose}
           className="absolute top-6 right-6 text-3xl text-red-600 cursor-pointer"
         />
         // Book details

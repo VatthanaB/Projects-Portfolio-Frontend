@@ -7,12 +7,11 @@ const BackButton = ({ destination = "/book-store" }) => {
   return (
     <div className="flex">
       {" "}
-      // Use flex layout
       <Link
-        to={destination} // Link to the destination passed as a prop, or "/book-store" by default
-        className="bg-sky-800 text-white px-4 py-1 rounded-lg w-fit" // CSS classes for styling
+        to={destination}
+        className="bg-sky-800 text-white px-4 py-1 rounded-lg w-fit"
       >
-        <BsArrowLeft className="text-2xl" /> // Left arrow icon
+        <BsArrowLeft className="text-2xl" />
       </Link>
     </div>
   );
