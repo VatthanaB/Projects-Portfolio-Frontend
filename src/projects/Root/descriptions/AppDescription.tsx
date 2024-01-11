@@ -60,3 +60,34 @@ export const FoodOrderingAppDescription = () => {
     </div>
   );
 };
+export const TindogAppDescription = () => {
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Tindog App</h1>
+      <p className="text-gray-600 mb-4">
+        A charming and simple frontend project crafted at the beginning of my
+        coding journey. Tindog is designed with HTML, CSS, and Bootstrap,
+        offering a delightful visual experience with no complex interactions or
+        functionalities.
+      </p>
+
+      <h2 className="text-lg font-bold mb-2">Key Features:</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>Appealing and user-friendly design.</li>
+        <li>Responsive layout for various devices.</li>
+        <li>Utilizes Bootstrap for easy styling and responsiveness.</li>
+      </ul>
+
+      <h2 className="text-lg font-bold mb-2">Technology Stack:</h2>
+      <p className="text-gray-600 mb-4">
+        Developed using HTML, CSS, and Bootstrap for simplicity and visual
+        appeal.
+      </p>
+
+      <p className="text-gray-600">
+        Explore the simplicity and visual charm of Tindog App, a tribute to my
+        early coding exploration where design meets simplicity.
+      </p>
+    </div>
+  );
+};

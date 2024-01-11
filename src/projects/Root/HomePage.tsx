@@ -1,23 +1,6 @@
-import Card from "./components/Card.tsx";
-import ReactMealImg from "../../assets/images/root/meals.jpg";
-import BookStoreImg from "../../assets/images/root/BookStore.jpg";
-import { SiVite, SiExpress, SiTailwindcss, SiTypescript } from "react-icons/si";
-import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
-import { FaReact } from "react-icons/fa";
-import {
-  BookStoreAppDescription,
-  FoodOrderingAppDescription,
-} from "./descriptions/AppDescription.tsx";
 import Svg from "./components/Svg.tsx";
+import CardsDisplay from "./components/CardsDisplay.tsx";
 function HomePage() {
-  const fullStackIcons = [
-    SiVite,
-    FaReact,
-    BiLogoNodejs,
-    BiLogoMongodb,
-    SiExpress,
-    SiTypescript,
-  ];
   return (
     <div className="bg-slate-400">
       <section className=" pt-16  text-white  bg-customBlue">
@@ -49,7 +32,7 @@ function HomePage() {
         <Svg color="rgb(148 163 184 )" />
       </section>
 
-      <div className=" flex flex-col justify-center content-center lg:flex-row  flex-wrap gap-4 lg:gap-8 mx-auto max-w-7xl px-4 sm:px-2 lg:px-8 py-16  ">
+      {/* <div className=" flex flex-col justify-center content-center lg:flex-row  flex-wrap gap-4 lg:gap-8 mx-auto max-w-7xl px-4 sm:px-2 lg:px-8 py-16  ">
         <Card
           image={BookStoreImg}
           route={"/book-store"}
@@ -68,7 +51,17 @@ function HomePage() {
           modalDescription={<FoodOrderingAppDescription />}
           githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/FoodOrderingApp"
         />
-      </div>
+        <Card
+          image={TindogIMG}
+          route={"/food-app"}
+          appName={"Food Ordering App"}
+          description="This is a food ordering app that allows users to order food from a menu."
+          icons={[...fullStackIcons]}
+          modalDescription={<FoodOrderingAppDescription />}
+          githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/FoodOrderingApp"
+        />
+      </div> */}
+      <CardsDisplay />
     </div>
   );
 }
