@@ -17,7 +17,7 @@ function Card(props: CardProps) {
         <img
           src={props.image}
           alt="car!"
-          className="w-full h-64 object-cover"
+          className="lg:w-full  lg:h-64 object-cover"
         />
       </figure>
       <div className="card-body text-slate-100">
