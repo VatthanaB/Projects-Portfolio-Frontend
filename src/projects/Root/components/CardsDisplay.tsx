@@ -44,7 +44,7 @@ const CardsDisplay = () => {
       <CardExternal
         image={TindogIMG}
         route="https://vatthanab.github.io/TindogWebsite/"
-        appName={"Tindog Frontend"}
+        appName={"Tindog Website"}
         description="This is a simple Frontend website for a fictional app called Tindog."
         icons={[FaHtml5, FaBootstrap, FaCss3Alt]}
         modalDescription={<TindogAppDescription />}
