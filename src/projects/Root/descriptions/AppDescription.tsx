@@ -91,3 +91,42 @@ export const TindogAppDescription = () => {
     </div>
   );
 };
+
+export const InfiniteAnimeViewerDescription = () => {
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Infinite Anime Viewer</h1>
+      <p className="text-gray-600 mb-4">
+        Dive into the captivating world of anime with the Infinite Anime Viewer,
+        a dynamic application built on the Next.js framework. This app combines
+        the fluidity of infinite scrolling, the immersive animations of Framer
+        Motion, and the power of React to bring you an unparalleled anime
+        discovery experience.
+      </p>
+
+      <h2 className="text-lg font-bold mb-2">Key Features:</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>
+          Seamless and endless anime exploration through infinite scrolling.
+        </li>
+        <li>Immersive card interactions powered by Framer Motion.</li>
+        <li>Real-time data updates from a dedicated anime API.</li>
+      </ul>
+
+      <h2 className="text-lg font-bold mb-2">Why Infinite Anime Viewer?</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>Experience the latest and most relevant anime content.</li>
+        <li>Engage with captivating animations and smooth transitions.</li>
+        <li>
+          Effortlessly powered by the Next.js framework for optimal performance.
+        </li>
+      </ul>
+
+      <p className="text-gray-600">
+        Elevate your anime discovery journey with Infinite Anime Viewer – where
+        technology meets the art of anime, beautifully presented with Next.js,
+        Framer Motion, and a touch of infinite scrolling magic.
+      </p>
+    </div>
+  );
+};

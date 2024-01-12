@@ -3,12 +3,21 @@ import CardExternal from "./CardExternal.tsx";
 import TindogIMG from "../../../assets/images/root/tindog.png";
 import ReactMealImg from "../../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
-import { SiVite, SiExpress, SiTailwindcss, SiTypescript } from "react-icons/si";
+import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
+import {
+  SiVite,
+  SiExpress,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiFramer,
+} from "react-icons/si";
 import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
 import {
   BookStoreAppDescription,
   FoodOrderingAppDescription,
+  InfiniteAnimeViewerDescription,
   TindogAppDescription,
 } from "../descriptions/AppDescription.tsx";
 
@@ -49,6 +58,15 @@ const CardsDisplay = () => {
         icons={[FaHtml5, FaBootstrap, FaCss3Alt]}
         modalDescription={<TindogAppDescription />}
         githubLink="https://github.com/VatthanaB/TindogWebsite"
+      />
+      <CardExternal
+        image={InfiniteAnimeViewerIMG}
+        route="https://infinite-anime-viewer.vercel.app/" // Replace with your actual deployment URL
+        appName={"Infinite Anime Viewer"}
+        description="Explore the world of anime with seamless infinite scrolling and captivating animations."
+        icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer]}
+        modalDescription={<InfiniteAnimeViewerDescription />}
+        githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
       />
     </div>
   );
