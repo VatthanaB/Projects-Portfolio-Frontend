@@ -55,7 +55,6 @@ import { FoodOrderingAppDescription } from "./appDescriptions";
 
 - Effortless food ordering experience.
 - Real-time updates and tracking.
-- Secure payment options for convenience.
 
 ### Technology Stack
 
