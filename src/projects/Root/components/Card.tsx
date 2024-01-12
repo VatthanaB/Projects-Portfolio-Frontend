@@ -14,7 +14,7 @@ interface CardProps {
 }
 function Card(props: CardProps) {
   let cardClass = "card md:w-4/5 lg:w-1/4 glass ";
-  let imageClass = "lg:w-full  lg:h-64 object-cover";
+  let imageClass = "w-full h-48 lg:h-64 object-cover";
   let iconsClass = "w-6 h-6 mx-1 inline-flex text-slate-200";
   let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
@@ -41,7 +41,7 @@ function Card(props: CardProps) {
       <div className={cardBodyClass}>
         <h2 className={appNameClass}>{props.appName}</h2>
         <p className={descriptionClass}>{props.description}</p>
-        <p className="mb-3  font-normal text-customBlue dark:text-gray-400">
+        <p className="mb-3  font-norma l text-customBlue dark:text-gray-400">
           {props.icons.map((Icon) => (
             <Icon className={iconsClass} />
           ))}
