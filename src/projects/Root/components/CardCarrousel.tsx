@@ -20,7 +20,8 @@ import {
   InfiniteAnimeViewerDescription,
   TindogAppDescription,
 } from "../descriptions/AppDescription.tsx";
-
+import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 const fullStackIcons = [
   SiVite,
   FaReact,
@@ -32,8 +33,22 @@ const fullStackIcons = [
 
 const CardCarrousel = () => {
   return (
-    <div className=" carousel w-full rounded-box mt-20   ">
-      <div className="carousel-item w-full flex justify-center">
+    // <div className=" carousel w-full rounded-box mt-20   ">
+    <Carousel
+      autoPlay={true}
+      infiniteLoop={true}
+      interval={2500}
+      swipeable
+      showThumbs={false}
+      showArrows={true}
+      showIndicators={false}
+      showStatus={false}
+      className="mt-20"
+      emulateTouch={true}
+      stopOnHover={true}
+      transitionTime={1000}
+    >
+      <div className="  w-full flex justify-center">
         <Card
           image={BookStoreImg}
           route={"/book-store"}
@@ -45,7 +60,7 @@ const CardCarrousel = () => {
           cardCarrousel={true}
         />
       </div>
-      <div className="carousel-item w-full flex justify-center">
+      <div className="w-full flex justify-center">
         <Card
           image={ReactMealImg}
           route={"/food-app"}
@@ -57,7 +72,7 @@ const CardCarrousel = () => {
           githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/FoodOrderingApp"
         />
       </div>
-      <div className="carousel-item w-full flex justify-center">
+      <div className=" w-full flex justify-center">
         <CardExternal
           image={TindogIMG}
           route="https://vatthanab.github.io/TindogWebsite/"
@@ -69,19 +84,19 @@ const CardCarrousel = () => {
           githubLink="https://github.com/VatthanaB/TindogWebsite"
         />
       </div>
-      <div className="carousel-item w-full flex justify-center">
+      <div className=" w-full flex justify-center">
         <CardExternal
           image={InfiniteAnimeViewerIMG}
           cardCarrousel={true}
           route="https://infinite-anime-viewer.vercel.app/" // Replace with your actual deployment URL
           appName={"Infinite Anime Viewer"}
-          description="Explore the world of anime with seamless infinite scrolling and captivating animations."
+          description="Explore the world of anime with seamless infinite scrolling."
           icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer]}
           modalDescription={<InfiniteAnimeViewerDescription />}
           githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
         />
       </div>
-    </div>
+    </Carousel>
   );
 };
 

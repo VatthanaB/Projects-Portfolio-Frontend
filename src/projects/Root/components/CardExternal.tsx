@@ -17,6 +17,7 @@ function Card(props: CardProps) {
   let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
   let cardBodyClass = "card-body text-slate-100  ";
+  let btnClass = "btn";
 
   if (props.cardCarrousel) {
     cardClass = "card md:w-4/5 lg:w-2/4 glass   ";
@@ -24,8 +25,10 @@ function Card(props: CardProps) {
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
     appNameClass =
       "card-title font-semi-bold text-customBlue text-2xl lg:text-4xl";
-    descriptionClass = "text-slate-100 text-lg lg:text-2xl";
-    cardBodyClass = "card-body text-slate-100 space-y-3  ";
+    descriptionClass = "text-slate-100 text-lg lg:text-2xl ";
+    cardBodyClass =
+      "card-body text-slate-100 space-y-3 flex flex-col items-start justify-center  ";
+    btnClass = "btn btn-lg";
   }
   return (
     <div className={cardClass}>
@@ -41,9 +44,9 @@ function Card(props: CardProps) {
           ))}
         </p>
 
-        <div className="card-actions justify-end">
+        <div className="card-actions  w-full  flex justify-end">
           <button
-            className="btn"
+            className={btnClass}
             onClick={() => {
               const modal = document.getElementById(props.appName);
               if (modal instanceof HTMLDialogElement) {
@@ -57,7 +60,7 @@ function Card(props: CardProps) {
             href={props.route}
             target="_blank"
             rel="noopener noreferrer"
-            className="btn"
+            className={btnClass}
           >
             Project
             <svg

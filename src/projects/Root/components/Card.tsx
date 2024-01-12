@@ -27,8 +27,9 @@ function Card(props: CardProps) {
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
     appNameClass =
       "card-title text-customBlue font-semi-bold text-2xl lg:text-4xl";
-    descriptionClass = "text-slate-100 text-lg lg:text-2xl";
-    cardBodyClass = "card-body text-slate-100 space-y-3  ";
+    descriptionClass = "text-slate-100 text-lg lg:text-2xl ";
+    cardBodyClass =
+      "card-body text-slate-100 space-y-3 flex flex-col items-center justify-center  ";
     btnClass = "btn btn-lg";
   }
 
@@ -46,7 +47,7 @@ function Card(props: CardProps) {
           ))}
         </p>
 
-        <div className="card-actions justify-end">
+        <div className="card-actions w-full  flex justify-end">
           <button
             className={btnClass}
             onClick={() => {
