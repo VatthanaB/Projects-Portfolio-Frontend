@@ -44,7 +44,6 @@ export const FoodOrderingAppDescription = () => {
       <ul className="list-disc pl-6 mb-4">
         <li>Effortless food ordering experience.</li>
         <li>Real-time updates and tracking.</li>
-        <li>Secure payment options for convenience.</li>
       </ul>
 
       <h2 className="text-lg font-bold mb-2">Technology Stack:</h2>
