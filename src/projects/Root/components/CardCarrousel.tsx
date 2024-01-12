@@ -1,12 +1,37 @@
-import cardArray from "../descriptions/cardArray.tsx";
-import React from "react";
+import Card from "./Card.tsx";
+import CardExternal from "./CardExternal.tsx";
+import TindogIMG from "../../../assets/images/root/tindog.png";
+import ReactMealImg from "../../../assets/images/root/meals.jpg";
+import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
+import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
+import {
+  SiVite,
+  SiExpress,
+  SiTailwindcss,
+  SiTypescript,
+  SiNextdotjs,
+  SiFramer,
+} from "react-icons/si";
+import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
+import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
+import {
+  BookStoreAppDescription,
+  FoodOrderingAppDescription,
+  InfiniteAnimeViewerDescription,
+  TindogAppDescription,
+} from "../descriptions/AppDescription.tsx";
 import { Carousel } from "react-responsive-carousel";
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+const fullStackIcons = [
+  SiVite,
+  FaReact,
+  BiLogoNodejs,
+  BiLogoMongodb,
+  SiExpress,
+  SiTypescript,
+];
+
 const CardCarrousel = () => {
-  const carrouselItems = cardArray.map((card) => (
-    <div className="w-full flex justify-center">
-      {React.cloneElement(card, { cardCarrousel: true })}
-    </div>
-  ));
   return (
     // <div className=" carousel w-full rounded-box mt-20   ">
     <Carousel
@@ -23,8 +48,7 @@ const CardCarrousel = () => {
       stopOnHover={true}
       transitionTime={1000}
     >
-      {carrouselItems}
-      {/* <div className="  w-full flex justify-center">
+      <div className="  w-full flex justify-center">
         <Card
           image={BookStoreImg}
           route={"/book-store"}
@@ -71,7 +95,7 @@ const CardCarrousel = () => {
           modalDescription={<InfiniteAnimeViewerDescription />}
           githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
         />
-      </div> */}
+      </div>
     </Carousel>
   );
 };
