@@ -4,7 +4,7 @@ import { FaHamburger } from "react-icons/fa";
 
 const Navbar = () => {
   const isActiveClassName =
-    "block py-2 pl-3 pr-4 text-customDarkOrange rounded hover:text-white md:border-0 ";
+    "block py-2 pl-3 pr-4 text-3xl text-customDarkOrange rounded hover:text-white md:border-0 transition-all duration-700 ease-in-out";
   const isNotActiveClassName =
     "block py-2 pl-3 pr-4 text-white rounded hover:text-customDarkOrange md:border-0 ";
   const isNotActiveClassNameMobile =
@@ -13,20 +13,23 @@ const Navbar = () => {
     "block py-2 pl-3 pr-4 text-customDarkOrange rounded hover:text-white md:border-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent";
   return (
     <nav className="bg-customBlue border-gray-200 dark:bg-gray-900 ">
-      <div className="max-w-screen-xl flex flex-wrap items-center justify-around md:justify-between mx-auto p-4">
+      <div className="w-screen flex  items-center justify-between md:justify-around  p-4">
         <Link to="/" className="flex items-center ">
           <img
             src={profilePic}
-            className="h-16 mr-3 rounded-full"
+            className=" h-10 lg:h-20 mr-3 rounded-full"
             alt=" Logo"
           />
-          <span className="self-center text-lg md:text-2xl font-semibold whitespace-nowrap text-white">
+          <span className="self-center text-xl md:text-3xl font-semibold whitespace-nowrap text-white ">
             Vatthana's Projects
           </span>
         </Link>
         {/* Navlinks */}
-        <div className="hidden w-full lg:block md:w-auto" id="navbar-default">
-          <ul className=" text-xl font-medium flex flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+        <div
+          className="hidden w-full lg:flex justify-center md:w-auto"
+          id="navbar-default"
+        >
+          <ul className=" text-2xl font-medium flex justify-start flex-col p-4 md:p-0 mt-4 border border-gray-100 rounded-lg md:flex-row md:space-x-8 md:mt-0 md:border-0  dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
             <li>
               <NavLink
                 to="/"

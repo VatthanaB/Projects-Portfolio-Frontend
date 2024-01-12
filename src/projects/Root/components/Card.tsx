@@ -16,7 +16,7 @@ function Card(props: CardProps) {
   let cardClass = "card md:w-4/5 lg:w-1/4 glass ";
   let imageClass = "lg:w-full  lg:h-64 object-cover";
   let iconsClass = "w-6 h-6 mx-1 inline-flex text-slate-200";
-  let appNameClass = "card-title text-customDarkOrange";
+  let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
   let cardBodyClass = "card-body text-slate-100  ";
   let btnClass = "btn";
@@ -25,7 +25,8 @@ function Card(props: CardProps) {
     cardClass = "card md:w-4/5 lg:w-2/4 glass   ";
     imageClass = "lg:w-full  lg:h-80 object-cover";
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
-    appNameClass = "card-title text-customBlue text-2xl lg:text-4xl";
+    appNameClass =
+      "card-title text-customBlue font-semi-bold text-2xl lg:text-4xl";
     descriptionClass = "text-slate-100 text-lg lg:text-2xl";
     cardBodyClass = "card-body text-slate-100 space-y-3  ";
     btnClass = "btn btn-lg";
