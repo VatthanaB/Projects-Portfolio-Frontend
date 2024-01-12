@@ -7,25 +7,36 @@ interface CardProps {
   description: string;
   modalDescription: JSX.Element;
   githubLink: string;
-
+  cardCarrousel?: boolean;
   icons: IconType[];
 }
 function Card(props: CardProps) {
+  let cardClass = "card md:w-4/5 lg:w-1/4 glass ";
+  let imageClass = "lg:w-full  lg:h-64 object-cover";
+  let iconsClass = "w-6 h-6 mx-1 inline-flex text-slate-200";
+  let appNameClass = "card-title text-customDarkOrange";
+  let descriptionClass = "text-slate-100";
+  let cardBodyClass = "card-body text-slate-100  ";
+
+  if (props.cardCarrousel) {
+    cardClass = "card md:w-4/5 lg:w-2/4 glass   ";
+    imageClass = "lg:w-full  lg:h-80 object-cover";
+    iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
+    appNameClass = "card-title text-customBlue text-2xl lg:text-4xl";
+    descriptionClass = "text-slate-100 text-lg lg:text-2xl";
+    cardBodyClass = "card-body text-slate-100 space-y-3  ";
+  }
   return (
-    <div className="card md:w-4/5 lg:w-1/4 glass ">
+    <div className={cardClass}>
       <figure>
-        <img
-          src={props.image}
-          alt="car!"
-          className="lg:w-full  lg:h-64 object-cover"
-        />
+        <img src={props.image} alt="car!" className={imageClass} />
       </figure>
-      <div className="card-body text-slate-100">
-        <h2 className="card-title text-customBlue">{props.appName}</h2>
-        <p>{props.description}</p>
+      <div className={cardBodyClass}>
+        <h2 className={appNameClass}>{props.appName}</h2>
+        <p className={descriptionClass}>{props.description}</p>
         <p className="mb-3  font-normal text-customBlue dark:text-gray-400">
           {props.icons.map((Icon) => (
-            <Icon className="w-6 h-6 mx-1 inline-flex " />
+            <Icon className={iconsClass} />
           ))}
         </p>
 
