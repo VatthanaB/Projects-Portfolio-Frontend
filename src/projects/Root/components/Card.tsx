@@ -20,10 +20,11 @@ function Card(props: CardProps) {
   let descriptionClass = "text-slate-100";
   let cardBodyClass = "card-body text-slate-100  ";
   let btnClass = "btn";
+  let btndivClass = "card-actions w-full  flex justify-end";
 
   if (props.cardCarrousel) {
     cardClass = "card md:w-4/5 lg:w-2/4 glass   ";
-    imageClass = "lg:w-full  lg:h-80 object-cover";
+    imageClass = "lg:w-full h-52 lg:h-80 object-cover";
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
     appNameClass =
       "card-title text-customBlue font-semi-bold text-2xl lg:text-4xl";
@@ -31,6 +32,7 @@ function Card(props: CardProps) {
     cardBodyClass =
       "card-body text-slate-100 space-y-3 flex flex-col items-center justify-center  ";
     btnClass = "btn btn-lg";
+    btndivClass = "card-actions w-full  flex justify-evenly ";
   }
 
   return (
@@ -47,7 +49,7 @@ function Card(props: CardProps) {
           ))}
         </p>
 
-        <div className="card-actions w-full  flex justify-end">
+        <div className={btndivClass}>
           <button
             className={btnClass}
             onClick={() => {

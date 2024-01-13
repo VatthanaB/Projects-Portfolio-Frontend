@@ -11,24 +11,26 @@ interface CardProps {
   icons: IconType[];
 }
 function Card(props: CardProps) {
-  let cardClass = "card md:w-4/5 lg:w-1/4 glass ";
+  let cardClass = "card md:w-4/5 lg:w-1/4 glass  ";
   let imageClass = "w-full h-48  lg:h-64 object-cover";
   let iconsClass = "w-6 h-6 mx-1 inline-flex text-slate-200";
   let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
   let cardBodyClass = "card-body text-slate-100  ";
   let btnClass = "btn";
+  let btndivClass = "card-actions w-full  flex justify-end";
 
   if (props.cardCarrousel) {
-    cardClass = "card md:w-4/5 lg:w-2/4 glass   ";
-    imageClass = "lg:w-full  lg:h-80 object-cover";
+    cardClass = "card md:w-4/5 lg:w-2/4 glass    ";
+    imageClass = "lg:w-full h-52 lg:h-80 object-cover";
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
     appNameClass =
       "card-title font-semi-bold text-customBlue text-2xl lg:text-4xl";
     descriptionClass = "text-slate-100 text-lg lg:text-2xl ";
     cardBodyClass =
-      "card-body text-slate-100 space-y-3 flex flex-col items-start justify-center  ";
+      "card-body text-slate-100 space-y-3 flex flex-col items-center justify-center  ";
     btnClass = "btn btn-lg";
+    btndivClass = "card-actions w-full  flex justify-evenly ";
   }
   return (
     <div className={cardClass}>
@@ -38,13 +40,13 @@ function Card(props: CardProps) {
       <div className={cardBodyClass}>
         <h2 className={appNameClass}>{props.appName}</h2>
         <p className={descriptionClass}>{props.description}</p>
-        <p className="mb-3  font-normal text-customBlue dark:text-gray-400">
+        <p className="mb-3  font-normal  text-customBlue dark:text-gray-400">
           {props.icons.map((Icon) => (
             <Icon className={iconsClass} />
           ))}
         </p>
 
-        <div className="card-actions  w-full  flex justify-end">
+        <div className={btndivClass}>
           <button
             className={btnClass}
             onClick={() => {

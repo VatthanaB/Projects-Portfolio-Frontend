@@ -43,7 +43,7 @@ const CardCarrousel = () => {
       showArrows={true}
       showIndicators={false}
       showStatus={false}
-      className="mt-20"
+      className="my-20"
       emulateTouch={true}
       stopOnHover={true}
       transitionTime={1000}
