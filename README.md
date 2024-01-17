@@ -11,7 +11,6 @@ This repository contains the source code for my portfolio projects website. The 
 - [Installation](#installation)
 - [Usage](#usage)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
