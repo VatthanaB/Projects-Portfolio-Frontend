@@ -91,13 +91,12 @@ const CardCarrousel = () => {
       <div className=" w-full flex justify-center">
         <CardExternal
           image={CopainAppImg}
-          route="https://github.com/VatthanaB/Flutter_Mobile_Quiz_App" // Replace with your actual deployment URL
+          route="https://copainquizapp-5b0fe.web.app/" // Replace with your actual deployment URL
           appName={"Copain Bakery Quiz App"}
           description="My First App made with Dart and Flutter. A simple Quiz App for a local bakery."
           icons={[SiDart, SiFlutter]}
           modalDescription={<CopainBakeryQuizDescription />}
           githubLink="https://github.com/VatthanaB/Flutter_Mobile_Quiz_App" // Replace with your actual GitHub repository link
-          githubOnly={true}
           cardCarrousel={true}
         />
       </div>
