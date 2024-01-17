@@ -129,3 +129,51 @@ export const InfiniteAnimeViewerDescription = () => {
     </div>
   );
 };
+
+export const CopainBakeryQuizDescription = () => {
+  return (
+    <div>
+      <h1 className="text-2xl font-bold mb-4">Copain Bakery Quiz</h1>
+      <p className="text-gray-600 mb-4">
+        Welcome to Copain Bakery Quiz, your go-to quiz app for all things bakery
+        and pastry! This app was crafted with passion by the executive chef of
+        Copain Bakery using Flutter and Dart.
+      </p>
+
+      <h2 className="text-lg font-bold mb-2">How It Works:</h2>
+      <p className="text-gray-600 mb-4">
+        Engage in a delightful quiz experience with questions related to the art
+        and science of baking. Answer a series of bakery and pastry-related
+        questions, and at the end, discover your results along with your score.
+      </p>
+
+      <h2 className="text-lg font-bold mb-2">Key Features:</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>
+          Explore a variety of questions covering different aspects of bakery
+          and pastry.
+        </li>
+        <li>Receive instant feedback on your answers.</li>
+        <li>View your overall score and results at the end of the quiz.</li>
+      </ul>
+
+      <h2 className="text-lg font-bold mb-2">Why Copain Bakery Quiz?</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>Test and enhance your knowledge of bakery and pastry.</li>
+        <li>
+          Experience a fun and engaging quiz designed by a professional chef.
+        </li>
+        <li>
+          Built with Flutter and Dart for a smooth and interactive user
+          experience.
+        </li>
+      </ul>
+
+      <p className="text-gray-600">
+        Immerse yourself in the world of baking and pastry with Copain Bakery
+        Quiz – where knowledge meets the art of baking, beautifully presented
+        with Flutter and Dart.
+      </p>
+    </div>
+  );
+};

@@ -9,6 +9,7 @@ interface CardProps {
   githubLink: string;
   cardCarrousel?: boolean;
   icons: IconType[];
+  githubOnly?: boolean;
 }
 function Card(props: CardProps) {
   let cardClass = "card md:w-4/5 lg:w-1/4 glass  ";
@@ -64,7 +65,8 @@ function Card(props: CardProps) {
             rel="noopener noreferrer"
             className={btnClass}
           >
-            Project
+            {props.githubOnly ? "Github" : "Project"}
+
             <svg
               className="rtl:rotate-180 w-3.5 h-3.5 ms-2"
               aria-hidden="true"
@@ -89,14 +91,16 @@ function Card(props: CardProps) {
               <div className="modal-action">
                 <form method="dialog" className="space-x-2">
                   {/* if there is a button in form, it will close the modal */}
-                  <a
-                    href={props.route}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn"
-                  >
-                    Go to app
-                  </a>
+                  {!props.githubOnly && (
+                    <a
+                      href={props.route}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="btn"
+                    >
+                      Go to app
+                    </a>
+                  )}
 
                   <a
                     href={props.githubLink}
@@ -106,6 +110,7 @@ function Card(props: CardProps) {
                   >
                     Github Repository
                   </a>
+
                   <button className="btn">Close</button>
                 </form>
               </div>

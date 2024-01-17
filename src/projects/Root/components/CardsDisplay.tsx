@@ -3,6 +3,7 @@ import CardExternal from "./CardExternal.tsx";
 import TindogIMG from "../../../assets/images/root/tindog.png";
 import ReactMealImg from "../../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
+import CopainAppImg from "../../../assets/images/root/CopainApp.png";
 import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
 import {
   SiVite,
@@ -11,6 +12,8 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiFramer,
+  SiDart,
+  SiFlutter,
 } from "react-icons/si";
 import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
@@ -19,6 +22,7 @@ import {
   FoodOrderingAppDescription,
   InfiniteAnimeViewerDescription,
   TindogAppDescription,
+  CopainBakeryQuizDescription,
 } from "../descriptions/AppDescription.tsx";
 import Svg from "./Svg.tsx";
 
@@ -68,6 +72,16 @@ const CardsDisplay = () => {
         icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer]}
         modalDescription={<InfiniteAnimeViewerDescription />}
         githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
+      />
+      <CardExternal
+        image={CopainAppImg}
+        route="https://github.com/VatthanaB/Flutter_Mobile_Quiz_App" // Replace with your actual deployment URL
+        appName={"Copain Bakery Quiz App"}
+        description="My First App made with Dart and Flutter. A simple Quiz App for a local bakery."
+        icons={[SiDart, SiFlutter]}
+        modalDescription={<CopainBakeryQuizDescription />}
+        githubLink="https://github.com/VatthanaB/Flutter_Mobile_Quiz_App" // Replace with your actual GitHub repository link
+        githubOnly={true}
       />
     </div>
   );
