@@ -132,12 +132,12 @@ export const InfiniteAnimeViewerDescription = () => {
 
 export const CopainBakeryQuizDescription = () => {
   return (
-    <div>
+    <div className="container mx-auto p-4">
       <h1 className="text-2xl font-bold mb-4">Copain Bakery Quiz</h1>
       <p className="text-gray-600 mb-4">
         Welcome to Copain Bakery Quiz, your go-to quiz app for all things bakery
         and pastry! This app was crafted with passion by the executive chef of
-        Copain Bakery using Flutter and Dart.
+        Copain Bakery using Flutter and Dart and is proudly hosted on Firebase.
       </p>
 
       <h2 className="text-lg font-bold mb-2">How It Works:</h2>
@@ -168,6 +168,13 @@ export const CopainBakeryQuizDescription = () => {
           experience.
         </li>
       </ul>
+
+      <h2 className="text-lg font-bold mb-2">App Preview:</h2>
+      <p className="text-gray-600 mb-4">
+        Explore the Copain Bakery Quiz with a visually appealing interface on
+        various devices. The app is designed to provide a seamless experience
+        across different screen sizes and is hosted on Firebase for reliability.
+      </p>
 
       <p className="text-gray-600">
         Immerse yourself in the world of baking and pastry with Copain Bakery
