@@ -3,6 +3,7 @@ import CardExternal from "./CardExternal.tsx";
 import TindogIMG from "../../../assets/images/root/tindog.png";
 import ReactMealImg from "../../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
+import CopainAppImg from "../../../assets/images/root/CopainApp.png";
 import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
 import {
   SiVite,
@@ -11,11 +12,14 @@ import {
   SiTypescript,
   SiNextdotjs,
   SiFramer,
+  SiFlutter,
+  SiDart,
 } from "react-icons/si";
 import { BiLogoNodejs, BiLogoMongodb } from "react-icons/bi";
 import { FaReact, FaHtml5, FaCss3Alt, FaBootstrap } from "react-icons/fa";
 import {
   BookStoreAppDescription,
+  CopainBakeryQuizDescription,
   FoodOrderingAppDescription,
   InfiniteAnimeViewerDescription,
   TindogAppDescription,
@@ -60,6 +64,18 @@ const CardCarrousel = () => {
           cardCarrousel={true}
         />
       </div>
+      <div className=" w-full flex justify-center">
+        <CardExternal
+          image={InfiniteAnimeViewerIMG}
+          cardCarrousel={true}
+          route="https://infinite-anime-viewer.vercel.app/" // Replace with your actual deployment URL
+          appName={"Infinite Anime Viewer"}
+          description="Explore the world of anime with seamless infinite scrolling."
+          icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer]}
+          modalDescription={<InfiniteAnimeViewerDescription />}
+          githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
+        />
+      </div>
       <div className="w-full flex justify-center">
         <Card
           image={ReactMealImg}
@@ -74,6 +90,19 @@ const CardCarrousel = () => {
       </div>
       <div className=" w-full flex justify-center">
         <CardExternal
+          image={CopainAppImg}
+          route="https://github.com/VatthanaB/Flutter_Mobile_Quiz_App" // Replace with your actual deployment URL
+          appName={"Copain Bakery Quiz App"}
+          description="My First App made with Dart and Flutter. A simple Quiz App for a local bakery."
+          icons={[SiDart, SiFlutter]}
+          modalDescription={<CopainBakeryQuizDescription />}
+          githubLink="https://github.com/VatthanaB/Flutter_Mobile_Quiz_App" // Replace with your actual GitHub repository link
+          githubOnly={true}
+          cardCarrousel={true}
+        />
+      </div>
+      <div className=" w-full flex justify-center">
+        <CardExternal
           image={TindogIMG}
           route="https://vatthanab.github.io/TindogWebsite/"
           appName={"Tindog Website"}
@@ -82,18 +111,6 @@ const CardCarrousel = () => {
           modalDescription={<TindogAppDescription />}
           cardCarrousel={true}
           githubLink="https://github.com/VatthanaB/TindogWebsite"
-        />
-      </div>
-      <div className=" w-full flex justify-center">
-        <CardExternal
-          image={InfiniteAnimeViewerIMG}
-          cardCarrousel={true}
-          route="https://infinite-anime-viewer.vercel.app/" // Replace with your actual deployment URL
-          appName={"Infinite Anime Viewer"}
-          description="Explore the world of anime with seamless infinite scrolling."
-          icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer]}
-          modalDescription={<InfiniteAnimeViewerDescription />}
-          githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
         />
       </div>
     </Carousel>
