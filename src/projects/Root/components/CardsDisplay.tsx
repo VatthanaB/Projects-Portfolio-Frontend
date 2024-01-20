@@ -4,6 +4,7 @@ import TindogIMG from "../../../assets/images/root/tindog.png";
 import ReactMealImg from "../../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
 import CopainAppImg from "../../../assets/images/root/CopainApp.png";
+import ExpenseTrackerImg from "../../../assets/images/root/ExpenseTrackerApp.png";
 import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
 import {
   SiVite,
@@ -23,6 +24,7 @@ import {
   InfiniteAnimeViewerDescription,
   TindogAppDescription,
   CopainBakeryQuizDescription,
+  VatthanasExpenseTrackerDescription,
 } from "../descriptions/AppDescription.tsx";
 import Svg from "./Svg.tsx";
 
@@ -63,6 +65,15 @@ const CardsDisplay = () => {
         icons={[FaHtml5, FaBootstrap, FaCss3Alt]}
         modalDescription={<TindogAppDescription />}
         githubLink="https://github.com/VatthanaB/TindogWebsite"
+      />{" "}
+      <CardExternal
+        image={ExpenseTrackerImg}
+        route="https://vatthana-expense-tracker.web.app/" // Replace with your actual deployment URL
+        appName={"Vatthana's Expense Tracker"}
+        description="Expense Tracker App made with Dart and Flutter. Theme responsive and Dark Mode. Manage your expenses with ease."
+        icons={[SiDart, SiFlutter]}
+        modalDescription={<VatthanasExpenseTrackerDescription />}
+        githubLink="https://github.com/VatthanaB/Flutter-expense_tracker" // Replace with your actual GitHub repository link
       />
       <CardExternal
         image={InfiniteAnimeViewerIMG}

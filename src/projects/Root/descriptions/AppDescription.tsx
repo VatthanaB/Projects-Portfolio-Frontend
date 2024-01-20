@@ -184,3 +184,46 @@ export const CopainBakeryQuizDescription = () => {
     </div>
   );
 };
+
+export const VatthanasExpenseTrackerDescription = () => {
+  return (
+    <div className="container mx-auto p-4">
+      <h1 className="text-2xl font-bold mb-4">Vatthana's Expense Tracker</h1>
+      <p className="text-gray-600 mb-4">
+        Vatthana's Expense Tracker is a Flutter and Dart-powered app designed to
+        simplify your financial management. With a clean and intuitive
+        interface, this app allows you to effortlessly track your expenses on
+        the go.
+      </p>
+
+      <h2 className="text-lg font-bold mb-2">Key Features:</h2>
+      <ul className="list-disc pl-6 mb-4">
+        <li>
+          <strong>Global Theming:</strong> Personalize your experience with
+          light or dark mode to suit your visual preferences.
+        </li>
+        <li>
+          <strong>Responsive Design:</strong> The app adapts seamlessly to
+          various screen sizes for a consistent experience on different devices.
+        </li>
+        <li>
+          <strong>Dynamic Chart Bars:</strong> Gain insights into your spending
+          patterns with dynamic chart bars illustrating the percentage
+          distribution across different expense categories.
+        </li>
+        <li>
+          <strong>Device Preview:</strong> Experience the app's features across
+          devices with the Device Preview package, ensuring a realistic
+          representation.
+        </li>
+      </ul>
+
+      <p className="text-gray-600 mb-4">
+        Stay organized and informed about your financial health. Vatthana's
+        Expense Tracker empowers you to make informed decisions by providing a
+        visual breakdown of your expenses. Try it out and take control of your
+        finances today.
+      </p>
+    </div>
+  );
+};
