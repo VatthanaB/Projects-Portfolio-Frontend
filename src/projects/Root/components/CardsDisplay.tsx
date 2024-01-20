@@ -4,7 +4,7 @@ import TindogIMG from "../../../assets/images/root/tindog.png";
 import ReactMealImg from "../../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
 import CopainAppImg from "../../../assets/images/root/CopainApp.png";
-import ExpenseTrackerImg from "../../../assets/images/root/ExpenseTrackerApp.png";
+import ExpenseTrackerImg from "../../../assets/images/root/ExpenseTrackerApp.jpg";
 import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
 import {
   SiVite,
