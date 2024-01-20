@@ -4,6 +4,7 @@ import TindogIMG from "../../../assets/images/root/tindog.png";
 import ReactMealImg from "../../../assets/images/root/meals.jpg";
 import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
 import CopainAppImg from "../../../assets/images/root/CopainApp.png";
+import ExpenseTrackerImg from "../../../assets/images/root/ExpenseTrackerApp.jpg";
 import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
 import {
   SiVite,
@@ -23,6 +24,7 @@ import {
   FoodOrderingAppDescription,
   InfiniteAnimeViewerDescription,
   TindogAppDescription,
+  VatthanasExpenseTrackerDescription,
 } from "../descriptions/AppDescription.tsx";
 import { Carousel } from "react-responsive-carousel";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
@@ -61,6 +63,18 @@ const CardCarrousel = () => {
           icons={[...fullStackIcons, SiTailwindcss]}
           modalDescription={<BookStoreAppDescription />}
           githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/BookStoreProject"
+          cardCarrousel={true}
+        />
+      </div>
+      <div className=" w-full flex justify-center">
+        <CardExternal
+          image={ExpenseTrackerImg}
+          route="https://vatthana-expense-tracker.web.app/" // Replace with your actual deployment URL
+          appName={"Vatthana's Expense Tracker"}
+          description="Expense Tracker App made with Dart and Flutter. Theme responsive and Dark Mode. Manage your expenses with ease."
+          icons={[SiDart, SiFlutter]}
+          modalDescription={<VatthanasExpenseTrackerDescription />}
+          githubLink="https://github.com/VatthanaB/Flutter-expense_tracker" // Replace with your actual GitHub repository link
           cardCarrousel={true}
         />
       </div>
