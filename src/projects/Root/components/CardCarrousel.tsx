@@ -49,7 +49,7 @@ const CardCarrousel = () => {
       showArrows={true}
       showIndicators={false}
       showStatus={false}
-      className="my-20"
+      className="my-20 hidden lg:block"
       emulateTouch={true}
       stopOnHover={true}
       transitionTime={1000}
