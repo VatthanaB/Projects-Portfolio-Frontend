@@ -8,9 +8,10 @@ const HeroSection = () => {
     <section className="  text-white  bg-customBlue mb-6 md:mb-0">
       <div className="max-w-4xl mx-auto text-center px-5 md:p-0 ">
         <TypewriterEffect
+          cursorClassName="hidden"
           words={[
             {
-              text: "Hello",
+              text: "Hi",
               className: "text-white",
             },
             {
@@ -40,10 +41,6 @@ const HeroSection = () => {
             {
               text: "developer",
               className: "text-customDarkOrange",
-            },
-            {
-              text: ".",
-              className: "text-white",
             },
           ]}
         />
