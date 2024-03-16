@@ -143,7 +143,7 @@ const Navbar = () => {
             </li>
             <li>
               <a
-                href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
+                href="https://vatthana-boulom.vercel.app/"
                 className={isNotActiveClassNameMobile}
                 target="_blank"
                 rel="noopener noreferrer"

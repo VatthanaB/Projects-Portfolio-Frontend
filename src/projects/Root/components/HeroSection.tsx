@@ -1,23 +1,81 @@
 import React from "react";
 import Svg from "./Svg";
+import { MacbookScroll } from "./ui/mackbookScroll";
+import { TypewriterEffect } from "./ui/typeWriterEffect";
 
 const HeroSection = () => {
   return (
-    <section className=" pt-16  text-white  bg-customBlue">
-      <div className="max-w-4xl mx-auto text-center px-5 md:p-0">
-        <h1 className="text-xl md:text-4xl font-semibold mb-4 ">
-          Welcome to Vatthana's{" "}
-          <span className="text-customDarkOrange lg:text-5xl">
-            Projects Portfolio!
-          </span>
-        </h1>
-        <p className="lg:text-xl mb-8 mt-8">
-          Hello! 👋 I'm Vatthana, an enthusiastic junior full-stack developer
-          excited about the world of web development. I specialize in the MERN
-          (MongoDB, Express.js, React.js, Node.js) stack and have a growing
-          proficiency in TypeScript. My journey involves continuous learning,
-          and I'm passionate about creating meaningful and impactful web
-          solutions.
+    <section className="  text-white  bg-customBlue mb-6 md:mb-0">
+      <div className="max-w-4xl mx-auto text-center px-5 md:p-0 ">
+        <TypewriterEffect
+          words={[
+            {
+              text: "Hello",
+              className: "text-white",
+            },
+            {
+              text: "!",
+              className: "text-white",
+            },
+            {
+              text: "I'm",
+              className: "text-white",
+            },
+            {
+              text: "Vatthana",
+              className: "text-white",
+            },
+            {
+              text: " an ",
+              className: "text-white",
+            },
+            {
+              text: "enthusiastic",
+              className: "text-white",
+            },
+            {
+              text: "full-stack",
+              className: "text-customDarkOrange",
+            },
+            {
+              text: "developer",
+              className: "text-customDarkOrange",
+            },
+            {
+              text: ".",
+              className: "text-white",
+            },
+          ]}
+        />
+        <p className=" md:text-xl lg:text-3xl my-6 lg:my-16 ">
+          🚀 Welcome to my corner of the web! 🚀{" "}
+        </p>{" "}
+        <p className=" text-sm md:text-lg lg:text-xl mb-8 mt-8  md:mx-16 lg:mx-0 leading-relaxed">
+          I'm a <span className="text-customDarkOrange font-medium">MERN </span>
+          stack enthusiast with a knack for{" "}
+          <span className="text-customDarkOrange font-medium">
+            TypeScript{" "}
+          </span>{" "}
+          and a passion for impactful web solutions. From
+          <span className="text-customDarkOrange font-medium">
+            {" "}
+            MongoDB{" "}
+          </span>{" "}
+          to <span className="text-customDarkOrange font-medium">Node.js </span>
+          , I thrive on crafting seamless experiences. With{" "}
+          <span className="text-customDarkOrange font-medium">DevOps</span>{" "}
+          chops and{" "}
+          <span className="text-customDarkOrange font-medium">Next.js</span>{" "}
+          finesse, I'm all about efficiency and performance. Let's build
+          something extraordinary together! <br />
+          <a
+            className="font-semibold text-customDarkOrange text-xl "
+            href="https://vatthana-boulom.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Personal Page
+          </a>{" "}
         </p>
         <p className="lg:text-lg ">
           This site showcases a collection of projects on a single platform for
@@ -34,7 +92,11 @@ const HeroSection = () => {
             My Personal Page
           </a>{" "}
           .
-        </p>
+        </p> */}
+        <div className="hidden md:block">
+          <MacbookScroll />
+        </div>
+        <div className="h-96 mb-96 hidden md:block"></div>
       </div>
 
       <Svg color="rgb(148 163 184 )" />

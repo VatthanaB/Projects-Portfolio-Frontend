@@ -44,7 +44,7 @@ const CardCarrousel = () => {
     <Carousel
       autoPlay={true}
       infiniteLoop={true}
-      interval={2500}
+      interval={3000}
       swipeable
       showThumbs={false}
       showArrows={true}
@@ -53,7 +53,7 @@ const CardCarrousel = () => {
       className="my-20 hidden lg:block"
       emulateTouch={true}
       stopOnHover={true}
-      transitionTime={1000}
+      transitionTime={1500}
     >
       <div className={cardClass}>
         <Card
