@@ -27,7 +27,7 @@ const HeroSection = () => {
           For more information about me, you can visit{" "}
           <a
             className="font-bold "
-            href="https://vatthana-portfolio-a20e88488316.herokuapp.com/"
+            href="https://vatthana-boulom.vercel.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
