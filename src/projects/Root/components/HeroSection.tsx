@@ -25,7 +25,8 @@ const HeroSection = () => {
             },
             {
               text: "Vatthana",
-              className: "text-white",
+              className:
+                "text-white text-customDarkOrange text-xl md:text-3xl lg:text-5xl ",
             },
             {
               text: " an ",
@@ -37,11 +38,13 @@ const HeroSection = () => {
             },
             {
               text: "full-stack",
-              className: "text-customDarkOrange",
+              className:
+                "text-customDarkOrange text-xl md:text-3xl lg:text-5xl",
             },
             {
               text: "developer",
-              className: "text-customDarkOrange",
+              className:
+                "text-customDarkOrange text-xl md:text-3xl lg:text-5xl",
             },
           ]}
         />
