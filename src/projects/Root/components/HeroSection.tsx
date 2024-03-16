@@ -2,6 +2,7 @@ import React from "react";
 import Svg from "./Svg";
 import { MacbookScroll } from "./ui/mackbookScroll";
 import { TypewriterEffect } from "./ui/typeWriterEffect";
+import profile from "../../../assets/images/root/favicon.ico";
 
 const HeroSection = () => {
   return (
@@ -75,7 +76,9 @@ const HeroSection = () => {
           </a>{" "}
         </p>
         <div className="hidden md:block ">
-          <MacbookScroll />
+          <MacbookScroll
+            badge={<img src={profile} className="w-6 rounded-full" />}
+          />
         </div>
       </div>
 
