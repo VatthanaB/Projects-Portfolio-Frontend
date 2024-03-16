@@ -164,11 +164,17 @@ export const Lid = ({
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
         <div className="absolute inset-0 bg-[#272729] rounded-lg" />
-        <img
-          src={src || "images/macbook.png"}
-          alt="aceternity logo"
-          className="object-center object-left-top absolute rounded-lg inset-0 h-full w-full"
-        />
+        <a
+          href="https://github.com/VatthanaB"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={src || "images/macbook.png"}
+            alt="aceternity logo"
+            className="object-center object-left-top absolute rounded-lg inset-0 h-full w-full"
+          />
+        </a>
       </motion.div>
     </div>
   );

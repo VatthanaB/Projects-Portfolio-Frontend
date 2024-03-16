@@ -2,26 +2,11 @@ import React from "react";
 import Svg from "./Svg";
 import { MacbookScroll } from "./ui/mackbookScroll";
 import { TypewriterEffect } from "./ui/typeWriterEffect";
-import { text } from "stream/consumers";
 
 const HeroSection = () => {
   return (
-    <section className="  text-white  bg-customBlue mb-16 md:mb-0">
+    <section className="  text-white  bg-customBlue mb-6 md:mb-0">
       <div className="max-w-4xl mx-auto text-center px-5 md:p-0 ">
-        <h1 className="text-xl md:text-4xl font-semibold mb-4 md:hidden">
-          Welcome to Vatthana's{" "}
-          <span className="text-customDarkOrange lg:text-5xl">
-            Projects Portfolio!
-          </span>
-        </h1>
-
-        <p className="lg:text-xl mb-8 mt-8 md:hidden">
-          🚀 Welcome to my corner of the web! 🚀 I'm a MERN stack specialist
-          with a knack for TypeScript and a passion for impactful web solutions.
-          From MongoDB to Node.js, I thrive on crafting seamless experiences.
-          With DevOps chops and Next.js finesse, I'm all about efficiency and
-          performance. Let's build something extraordinary together!
-        </p>
         <TypewriterEffect
           words={[
             {
@@ -62,6 +47,36 @@ const HeroSection = () => {
             },
           ]}
         />
+        <p className=" md:text-xl lg:text-3xl my-6 lg:my-16 ">
+          🚀 Welcome to my corner of the web! 🚀{" "}
+        </p>{" "}
+        <p className=" text-sm md:text-lg lg:text-xl mb-8 mt-8  md:mx-16 lg:mx-0 leading-relaxed">
+          I'm a <span className="text-customDarkOrange font-medium">MERN </span>
+          stack enthusiast with a knack for{" "}
+          <span className="text-customDarkOrange font-medium">
+            TypeScript{" "}
+          </span>{" "}
+          and a passion for impactful web solutions. From
+          <span className="text-customDarkOrange font-medium">
+            {" "}
+            MongoDB{" "}
+          </span>{" "}
+          to <span className="text-customDarkOrange font-medium">Node.js </span>
+          , I thrive on crafting seamless experiences. With{" "}
+          <span className="text-customDarkOrange font-medium">DevOps</span>{" "}
+          chops and{" "}
+          <span className="text-customDarkOrange font-medium">Next.js</span>{" "}
+          finesse, I'm all about efficiency and performance. Let's build
+          something extraordinary together! <br />
+          <a
+            className="font-semibold text-customDarkOrange text-xl "
+            href="https://vatthana-boulom.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            My Personal Page
+          </a>{" "}
+        </p>
         {/* <p className="lg:text-lg ">
           This site showcases a collection of projects on a single platform for
           easy access. As a junior developer, I'm eager to share my progress and
@@ -81,7 +96,6 @@ const HeroSection = () => {
         <div className="hidden md:block">
           <MacbookScroll />
         </div>
-
         <div className="h-96 mb-96 hidden md:block"></div>
       </div>
 

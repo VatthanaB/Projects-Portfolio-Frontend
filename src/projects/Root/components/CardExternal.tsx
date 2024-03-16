@@ -13,7 +13,7 @@ interface CardProps {
 }
 function Card(props: CardProps) {
   let cardClass = "card md:w-4/5 lg:w-1/4 glass  ";
-  let imageClass = "w-full h-48  lg:h-64 object-cover";
+  let imageClass = "w-full h-48  lg:h-64 object-center";
   let iconsClass = "w-6 h-6 mx-1 inline-flex text-slate-200";
   let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
