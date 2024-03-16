@@ -23,7 +23,7 @@ function Card(props: CardProps) {
   let btndivClass = "card-actions w-full  flex justify-end";
 
   if (props.cardCarrousel) {
-    cardClass = "card md:w-4/5 lg:w-2/4 glass  h-[550px] md:h-[600px]  ";
+    cardClass = "card md:w-4/5 lg:w-2/5 glass  h-[550px] md:h-[600px]  ";
     imageClass = "lg:w-full h-52 lg:h-80 object-cover";
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
     appNameClass =
