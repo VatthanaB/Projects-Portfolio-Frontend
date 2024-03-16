@@ -6,6 +6,7 @@ import BookStoreImg from "../../../assets/images/root/BookStore.jpg";
 import CopainAppImg from "../../../assets/images/root/CopainApp.png";
 import ExpenseTrackerImg from "../../../assets/images/root/ExpenseTrackerApp.jpg";
 import InfiniteAnimeViewerIMG from "../../../assets/images/root/AnimeInfiniteviewer.png";
+import WeddingWebsiteIMG from "../../../assets/images/root/wedding.png";
 import {
   SiVite,
   SiExpress,
@@ -25,6 +26,7 @@ import {
   TindogAppDescription,
   CopainBakeryQuizDescription,
   VatthanasExpenseTrackerDescription,
+  WeddingWebsiteDescription,
 } from "../descriptions/AppDescription.tsx";
 import Svg from "./Svg.tsx";
 
@@ -38,7 +40,7 @@ const fullStackIcons = [
 ];
 const CardsDisplay = () => {
   const cardsToDisplay = (
-    <div className=" flex flex-col justify-center content-center lg:flex-row  flex-wrap gap-4 lg:gap-8 mx-auto max-w-full px-4 sm:px-2 lg:px-8 py-16  ">
+    <div className=" flex flex-col justify-center content-center  lg:flex-row  flex-wrap gap-4 lg:gap-8 mx-auto max-w-full px-4 sm:px-2 lg:px-8 py-16  ">
       <Card
         image={BookStoreImg}
         route={"/book-store"}
@@ -83,6 +85,15 @@ const CardsDisplay = () => {
         icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript, SiFramer]}
         modalDescription={<InfiniteAnimeViewerDescription />}
         githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
+      />
+      <CardExternal
+        image={WeddingWebsiteIMG}
+        route="https://vath-alex-wedding.vercel.app/"
+        appName={"Wedding Website (in progress..)"}
+        description="Create unforgettable memories for your special day with the Wedding Website."
+        icons={[FaReact, SiNextdotjs, SiTailwindcss, SiTypescript]}
+        modalDescription={<WeddingWebsiteDescription />}
+        githubLink="https://github.com/VatthanaB/wedding-website"
       />
       <CardExternal
         image={CopainAppImg}
