@@ -67,7 +67,7 @@ export const MacbookScroll = ({
   return (
     <div
       ref={ref}
-      className="min-h-[200vh]  flex flex-col items-center py-0 md:pb-80 md:pt-80 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50"
+      className="min-h-[150vh]  flex flex-col items-center py-0 md:pb-80 md:pt-40 justify-start flex-shrink-0 [perspective:800px] transform md:scale-100  scale-[0.35] sm:scale-50 overflow-hidden  "
     >
       <motion.h2
         style={{
@@ -132,7 +132,7 @@ export const Lid = ({
   src?: string;
 }) => {
   return (
-    <div className="relative [perspective:800px]">
+    <div className="relative [perspective:800px]  ">
       <div
         style={{
           transform: "perspective(800px) rotateX(-25deg) translateZ(0px)",
@@ -163,7 +163,7 @@ export const Lid = ({
         }}
         className="h-96 w-[32rem] absolute inset-0 bg-[#010101] rounded-2xl p-2"
       >
-        <div className="absolute inset-0 bg-[#272729] rounded-lg" />
+        <div className="absolute inset-0 bg-[#272729] rounded-lg " />
         <a
           href="https://github.com/VatthanaB"
           target="_blank"

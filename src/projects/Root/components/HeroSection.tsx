@@ -74,10 +74,9 @@ const HeroSection = () => {
             My Personal Page
           </a>{" "}
         </p>
-        <div className="hidden md:block">
+        <div className="hidden md:block -z-10">
           <MacbookScroll />
         </div>
-        <div className="h-96 mb-96 hidden md:block"></div>
       </div>
 
       <Svg color="rgb(148 163 184 )" />
