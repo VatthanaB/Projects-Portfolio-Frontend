@@ -1,6 +1,8 @@
 import React from "react";
 import Svg from "./Svg";
 import { MacbookScroll } from "./ui/mackbookScroll";
+import { TypewriterEffect } from "./ui/typeWriterEffect";
+import { text } from "stream/consumers";
 
 const HeroSection = () => {
   return (
@@ -14,13 +16,52 @@ const HeroSection = () => {
         </h1>
 
         <p className="lg:text-xl mb-8 mt-8 md:hidden">
-          Hello! 👋 I'm Vatthana, an enthusiastic junior full-stack developer
-          excited about the world of web development. I specialize in the MERN
-          (MongoDB, Express.js, React.js, Node.js) stack and have a growing
-          proficiency in TypeScript. My journey involves continuous learning,
-          and I'm passionate about creating meaningful and impactful web
-          solutions.
+          🚀 Welcome to my corner of the web! 🚀 I'm a MERN stack specialist
+          with a knack for TypeScript and a passion for impactful web solutions.
+          From MongoDB to Node.js, I thrive on crafting seamless experiences.
+          With DevOps chops and Next.js finesse, I'm all about efficiency and
+          performance. Let's build something extraordinary together!
         </p>
+        <TypewriterEffect
+          words={[
+            {
+              text: "Hello",
+              className: "text-white",
+            },
+            {
+              text: "!",
+              className: "text-white",
+            },
+            {
+              text: "I'm",
+              className: "text-white",
+            },
+            {
+              text: "Vatthana",
+              className: "text-white",
+            },
+            {
+              text: " an ",
+              className: "text-white",
+            },
+            {
+              text: "enthusiastic",
+              className: "text-white",
+            },
+            {
+              text: "full-stack",
+              className: "text-customDarkOrange",
+            },
+            {
+              text: "developer",
+              className: "text-customDarkOrange",
+            },
+            {
+              text: ".",
+              className: "text-white",
+            },
+          ]}
+        />
         {/* <p className="lg:text-lg ">
           This site showcases a collection of projects on a single platform for
           easy access. As a junior developer, I'm eager to share my progress and
