@@ -38,7 +38,6 @@ const fullStackIcons = [
 ];
 
 const CardCarrousel = () => {
-  const cardClass = "w-full flex justify-center";
   return (
     // <div className=" carousel w-full rounded-box mt-20   ">
     <Carousel
@@ -55,7 +54,7 @@ const CardCarrousel = () => {
       stopOnHover={true}
       transitionTime={1500}
     >
-      <div className={cardClass}>
+      <div className="  w-full flex justify-center">
         <Card
           image={BookStoreImg}
           route={"/book-store"}
@@ -67,7 +66,7 @@ const CardCarrousel = () => {
           cardCarrousel={true}
         />
       </div>
-      <div className={cardClass}>
+      <div className=" w-full flex justify-center">
         <CardExternal
           image={ExpenseTrackerImg}
           route="https://vatthana-expense-tracker.web.app/" // Replace with your actual deployment URL
@@ -79,7 +78,7 @@ const CardCarrousel = () => {
           cardCarrousel={true}
         />
       </div>
-      <div className={cardClass}>
+      <div className=" w-full flex justify-center">
         <CardExternal
           image={InfiniteAnimeViewerIMG}
           cardCarrousel={true}
@@ -91,7 +90,7 @@ const CardCarrousel = () => {
           githubLink="https://github.com/VatthanaB/Anime-Infinite-Scrolling" // Replace with your actual GitHub repository link
         />
       </div>
-      <div className={cardClass}>
+      <div className="w-full flex justify-center">
         <Card
           image={ReactMealImg}
           route={"/food-app"}
@@ -103,7 +102,7 @@ const CardCarrousel = () => {
           githubLink="https://github.com/VatthanaB/Projects-Portfolio-Frontend/tree/main/src/projects/FoodOrderingApp"
         />
       </div>
-      <div className={cardClass}>
+      <div className=" w-full flex justify-center">
         <CardExternal
           image={CopainAppImg}
           route="https://copainquizapp-5b0fe.web.app/" // Replace with your actual deployment URL
@@ -115,7 +114,7 @@ const CardCarrousel = () => {
           cardCarrousel={true}
         />
       </div>
-      <div className={cardClass}>
+      <div className=" w-full flex justify-center">
         <CardExternal
           image={TindogIMG}
           route="https://vatthanab.github.io/TindogWebsite/"
