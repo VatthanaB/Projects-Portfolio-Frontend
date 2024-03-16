@@ -77,22 +77,6 @@ const HeroSection = () => {
             My Personal Page
           </a>{" "}
         </p>
-        {/* <p className="lg:text-lg ">
-          This site showcases a collection of projects on a single platform for
-          easy access. As a junior developer, I'm eager to share my progress and
-          invite you to explore my projects below. I'm actively learning and
-          adapting to new technologies, and your feedback is highly appreciated!
-          For more information about me, you can visit{" "}
-          <a
-            className="font-bold "
-            href="https://vatthana-boulom.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            My Personal Page
-          </a>{" "}
-          .
-        </p> */}
         <div className="hidden md:block">
           <MacbookScroll />
         </div>

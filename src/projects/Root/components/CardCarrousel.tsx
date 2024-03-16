@@ -43,8 +43,8 @@ const CardCarrousel = () => {
     // <div className=" carousel w-full rounded-box mt-20   ">
     <Carousel
       autoPlay={true}
-      infiniteLoop={true}
-      interval={2500}
+      infiniteLoop={false}
+      interval={3000}
       swipeable
       showThumbs={false}
       showArrows={true}
