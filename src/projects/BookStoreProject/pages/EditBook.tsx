@@ -56,7 +56,7 @@ const EditBook = () => {
 
     // Make a PUT request to the API to update the book
     axios
-      .put(`http://localhost:5555/books/${id}`, data)
+      .put(`${import.meta.env.VITE_API_URL}/books/${id}`, data)
       .then(() => {
         // On success, set loading status, show a success snackbar, and navigate to the book store
         setLoading(false);
