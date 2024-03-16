@@ -41,7 +41,7 @@ const CardCarrousel = () => {
   const cardClass = "w-full flex justify-center ";
   return (
     // <div className=" carousel w-full rounded-box mt-20   ">
-    <div className="z-50 block">
+    <div className="hidden lg:block">
       {" "}
       <Carousel
         autoPlay={true}
@@ -52,7 +52,7 @@ const CardCarrousel = () => {
         showArrows={true}
         showIndicators={false}
         showStatus={false}
-        className="my-20 hidden lg:block z-50"
+        className="my-20 hidden lg:block "
         emulateTouch={true}
         stopOnHover={true}
         transitionTime={1500}

@@ -5,7 +5,7 @@ import { TypewriterEffect } from "./ui/typeWriterEffect";
 
 const HeroSection = () => {
   return (
-    <section className="  text-white  bg-customBlue mb-6 md:mb-0">
+    <section className="  text-white  bg-customBlue  ">
       <div className="max-w-4xl mx-auto text-center px-5 md:p-0 ">
         <TypewriterEffect
           cursorClassName="hidden"
@@ -47,7 +47,7 @@ const HeroSection = () => {
         <p className=" md:text-xl lg:text-3xl my-6 lg:my-16 ">
           🚀 Welcome to my corner of the web! 🚀{" "}
         </p>{" "}
-        <p className=" text-sm md:text-lg lg:text-xl mb-8 mt-8  md:mx-16 lg:mx-0 leading-relaxed">
+        <p className=" text-sm md:text-lg lg:text-xl pb-16 mt-8  md:mx-16 lg:mx-0 leading-relaxed">
           I'm a <span className="text-customDarkOrange font-medium">MERN </span>
           stack enthusiast with a knack for{" "}
           <span className="text-customDarkOrange font-medium">
@@ -74,7 +74,7 @@ const HeroSection = () => {
             My Personal Page
           </a>{" "}
         </p>
-        <div className="hidden md:block -z-10">
+        <div className="hidden md:block ">
           <MacbookScroll />
         </div>
       </div>

@@ -1,13 +1,16 @@
 interface SvgProps {
   color: string;
+  hidden?: boolean;
 }
 
 const Svg = (props: SvgProps) => {
   return (
     <svg
-      className="max-w-screen relative bottom-0 text-slate-200"
+      className={`max-w-screen relative bottom-0 text-slate-200 ${
+        props.hidden ? "hidden lg:block" : ""
+      }`}
       xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 1440 200"
+      viewBox="0 0 1440 190"
     >
       <path
         fill={props.color}
