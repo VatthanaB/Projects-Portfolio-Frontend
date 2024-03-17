@@ -96,7 +96,7 @@ function Card(props: CardProps) {
                       href={props.route}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn dark:bg-customDarkOrange dark:text-white"
+                      className="btn btn-lg dark:bg-customDarkOrange dark:text-white"
                     >
                       Go to app
                     </a>
@@ -104,14 +104,14 @@ function Card(props: CardProps) {
 
                   <a
                     href={props.githubLink}
-                    className="btn dark:bg-customDarkOrange dark:text-white"
+                    className="btn btn-lg dark:bg-customDarkOrange dark:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Github Repository
                   </a>
 
-                  <button className="btn dark:bg-customDarkOrange dark:text-white">
+                  <button className="btn btn-lg dark:bg-customDarkOrange dark:text-white">
                     Close
                   </button>
                 </form>
