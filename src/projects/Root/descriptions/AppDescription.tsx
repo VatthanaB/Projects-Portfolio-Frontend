@@ -16,14 +16,18 @@ const DescriptionLayout: React.FC<DescriptionLayoutProps> = ({
   content,
 }) => {
   return (
-    <div className="container mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">{title}</h1>
-      <p className="text-gray-600 mb-4">{subtitle}</p>
+    <div className="container mx-auto p-4 dark:text-white flex flex-col justify-center items-center text-center">
+      <h1 className="text-2xl font-bold mb-4 dark:text-customDarkOrange">
+        {title}
+      </h1>
+      <p className="text-gray-600 mb-4 dark:text-white">{subtitle}</p>
 
       {features && (
         <>
-          <h2 className="text-lg font-bold mb-2">Key Features:</h2>
-          <ul className="list-disc pl-6 mb-4">
+          <h2 className="text-lg font-bold mb-2 dark:text-customDarkOrange">
+            Key Features:
+          </h2>
+          <ul className="list-disc pl-6 mb-4 text-left">
             {features.map((feature, index) => (
               <li key={index}>{feature}</li>
             ))}
@@ -33,12 +37,14 @@ const DescriptionLayout: React.FC<DescriptionLayoutProps> = ({
 
       {technology && (
         <>
-          <h2 className="text-lg font-bold mb-2">Technology Stack:</h2>
-          <p className="text-gray-600 mb-4">{technology}</p>
+          <h2 className="text-lg font-bold mb-2 dark:text-customDarkOrange">
+            Technology Stack:
+          </h2>
+          <p className="text-gray-600 mb-4 dark:text-white">{technology}</p>
         </>
       )}
 
-      <p className="text-gray-600">{content}</p>
+      <p className="text-gray-600 dark:text-white">{content}</p>
     </div>
   );
 };

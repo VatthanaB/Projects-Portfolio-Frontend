@@ -18,19 +18,19 @@ function Card(props: CardProps) {
   let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
   let cardBodyClass = "card-body text-slate-100  ";
-  let btnClass = "btn";
+  let btnClass = "btn dark:bg-customDarkOrange dark:text-white";
   let btndivClass = "card-actions w-full  flex justify-end";
 
   if (props.cardCarrousel) {
-    cardClass = "card  md:w-4/5 lg:w-2/5 glass h-[550px] md:h-[600px]   ";
-    imageClass = "lg:w-full h-52 lg:h-80 object-cover";
-    iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
+    cardClass = "card  md:w-4/5 lg:w-2/5 glass h-[650px] md:h-[600px]   ";
+    imageClass = "lg:w-full h-52 lg:h-80 object-center  ";
+    iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex dark:text-gray-800";
     appNameClass =
       "card-title font-semi-bold text-customBlue text-2xl lg:text-4xl";
-    descriptionClass = "text-slate-100 text-lg lg:text-2xl ";
+    descriptionClass = "text-slate-100 text-lg lg:text-2xl dark:text-gray-800";
     cardBodyClass =
       "card-body text-slate-100 space-y-3 flex flex-col items-center justify-center  ";
-    btnClass = "btn btn-lg";
+    btnClass = "btn btn-lg dark:bg-gray-800 dark:text-white";
     btndivClass = "card-actions w-full  flex justify-evenly ";
   }
   return (
@@ -96,7 +96,7 @@ function Card(props: CardProps) {
                       href={props.route}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="btn"
+                      className="btn dark:bg-customDarkOrange dark:text-white"
                     >
                       Go to app
                     </a>
@@ -104,14 +104,16 @@ function Card(props: CardProps) {
 
                   <a
                     href={props.githubLink}
-                    className="btn"
+                    className="btn dark:bg-customDarkOrange dark:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Github Repository
                   </a>
 
-                  <button className="btn">Close</button>
+                  <button className="btn dark:bg-customDarkOrange dark:text-white">
+                    Close
+                  </button>
                 </form>
               </div>
             </div>

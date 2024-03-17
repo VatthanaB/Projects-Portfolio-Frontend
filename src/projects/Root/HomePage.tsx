@@ -4,7 +4,7 @@ import CardCarrousel from "./components/CardCarrousel.tsx";
 import HeroSection from "./components/HeroSection.tsx";
 function HomePage() {
   return (
-    <div className="bg-slate-400 flex-col items-center justify-center pb-16  ">
+    <div className="bg-slate-400 dark:bg-slate-500 flex-col items-center justify-center pb-16  ">
       <HeroSection />
 
       <CardCarrousel />

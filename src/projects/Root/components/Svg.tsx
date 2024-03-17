@@ -6,7 +6,7 @@ interface SvgProps {
 const Svg = (props: SvgProps) => {
   return (
     <svg
-      className={`max-w-screen relative bottom-0 text-slate-200 ${
+      className={`max-w-screen relative bottom-0 text-slate-200 dark:text-slate-500 ${
         props.hidden ? "hidden lg:block" : ""
       }`}
       xmlns="http://www.w3.org/2000/svg"

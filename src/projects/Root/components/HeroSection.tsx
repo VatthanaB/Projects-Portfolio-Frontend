@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Svg from "./Svg";
 import { MacbookScroll } from "./ui/mackbookScroll";
 import { TypewriterEffect } from "./ui/typeWriterEffect";
 import profile from "../../../assets/images/root/favicon.ico";
 
 const HeroSection = () => {
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    const match = window.matchMedia("(prefers-color-scheme: dark)");
+    setIsDarkMode(match.matches);
+
+    const handler = (event: {
+      matches: boolean | ((prevState: boolean) => boolean);
+    }) => setIsDarkMode(event.matches);
+    match.addListener(handler);
+
+    return () => match.removeListener(handler);
+  }, []);
+
   return (
     <section className="  text-white  bg-customBlue  ">
       <div className="max-w-4xl mx-auto text-center px-5 md:p-0 ">
@@ -85,7 +99,7 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Svg color="rgb(148 163 184 )" />
+      <Svg color={isDarkMode ? "rgb(100 116 139)" : "rgb(148 163 184)"} />
     </section>
   );
 };

@@ -13,17 +13,17 @@ interface CardProps {
   icons: IconType[];
 }
 function Card(props: CardProps) {
-  let cardClass = "card md:w-4/5 lg:w-1/4 glass ";
+  let cardClass = "card md:w-4/5 lg:w-1/4 glass  ";
   let imageClass = "w-full h-48 lg:h-64 object-center";
   let iconsClass = "w-6 h-6 mx-1 inline-flex text-slate-200";
   let appNameClass = "card-title text-xl text-customDarkOrange";
   let descriptionClass = "text-slate-100";
   let cardBodyClass = "card-body text-slate-100  ";
-  let btnClass = "btn";
+  let btnClass = "btn dark:bg-customDarkOrange dark:text-white";
   let btndivClass = "card-actions w-full  flex justify-end";
 
   if (props.cardCarrousel) {
-    cardClass = "card md:w-4/5 lg:w-2/5 glass  h-[550px] md:h-[600px]  ";
+    cardClass = "card md:w-4/5 lg:w-2/5 glass  h-[650px] md:h-[600px]  ";
     imageClass = "lg:w-full h-52 lg:h-80 object-cover";
     iconsClass = " h-6 lg:w-9 w-6 lg:h-9 mx-1 inline-flex ";
     appNameClass =
@@ -31,7 +31,7 @@ function Card(props: CardProps) {
     descriptionClass = "text-slate-100 text-lg lg:text-2xl ";
     cardBodyClass =
       "card-body text-slate-100 space-y-3 flex flex-col items-center justify-center  ";
-    btnClass = "btn btn-lg";
+    btnClass = "btn btn-lg dark:bg-customDarkOrange dark:text-white";
     btndivClass = "card-actions w-full  flex justify-evenly ";
   }
 
@@ -80,26 +80,31 @@ function Card(props: CardProps) {
             </svg>
           </Link>
           {/* MODAL */}
-          <dialog id={props.appName} className="modal">
+          <dialog id={props.appName} className="modal ">
             <div className="modal-box">
               <p className="py-4 text-customBlue">{props.modalDescription}</p>
 
               <div className="modal-action">
                 <form method="dialog" className="space-x-2">
                   {/* if there is a button in form, it will close the modal */}
-                  <Link to={props.route} className="btn">
+                  <Link
+                    to={props.route}
+                    className="btn btn-lg dark:bg-customDarkOrange dark:text-white"
+                  >
                     Go to app
                   </Link>
 
                   <a
                     href={props.githubLink}
-                    className="btn"
+                    className="btn btn-lg dark:bg-customDarkOrange dark:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     Github Repository
                   </a>
-                  <button className="btn">Close</button>
+                  <button className="btn btn-lg dark:bg-customDarkOrange dark:text-white">
+                    Close
+                  </button>
                 </form>
               </div>
             </div>
